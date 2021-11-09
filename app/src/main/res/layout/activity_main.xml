@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        app:layout_constraintBottom_toTopOf="@id/nav_host_"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Currency App"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:textColor="@color/purple_700"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/mode"
+            android:layout_marginLeft="@dimen/_100sdp"
+            app:layout_constraintTop_toTopOf="@id/title"
+            app:layout_constraintBottom_toBottomOf="@id/title"
+            app:layout_constraintLeft_toRightOf="@id/title"
+            android:src="@drawable/sun"
+            android:clickable="true"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"/>
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_18ssp"
+            android:textColor="@color/purple_700"
+            android:text="Eng"
+            app:layout_constraintTop_toTopOf="@id/title"
+            app:layout_constraintBottom_toBottomOf="@id/title"
+            app:layout_constraintLeft_toRightOf="@id/mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint"
+        app:navGraph="@navigation/nav_simple" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

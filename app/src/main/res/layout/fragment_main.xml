@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MainFragment">
+
+    <!--<TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency App"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textColor="@color/purple_700"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toTopOf="@id/tabMode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mode"
+        android:layout_marginLeft="@dimen/_100sdp"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintLeft_toRightOf="@id/title"
+        android:src="@drawable/sun"
+        android:clickable="true"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"/>
+
+    <TextView
+        android:id="@+id/language"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="@color/purple_700"
+        android:text="Eng"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintLeft_toRightOf="@id/mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>-->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabMode"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:tabIconTint="#EE4545"
+        app:tabIndicatorColor="#FFEB3B"
+        app:tabSelectedTextColor="#4CAF50"
+        app:tabTextColor="#E91E63"
+        app:layout_constraintBottom_toTopOf="@id/vp_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabMode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
